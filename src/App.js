@@ -7,8 +7,15 @@ import {Cities} from "./components/City";
 import {citiesFromPersonData} from "./utilities/person_utilities";
 import {EventDemo} from "./components/EventDemo";
 import {StateDemo} from "./components/StateDemo";
+import {useState} from "react";
+import "./services/firestore";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {PersonsFromDB} from "./components/PersonsFromDB";
+import {CarsFromDB} from "./components/CarsFromDB"
+import {MenuFromDB} from "./components/MenuFromDB";
 
 function App() {
+
     return (
         <div>
             <Numbers numbers={NUMBER_DATA} title="Numbers"/>
@@ -25,6 +32,9 @@ function App() {
             <Cities cities={citiesFromPersonData(PERSON_DATA)} title="Cities"/>
             <EventDemo/>
             <StateDemo/>
+            <PersonsFromDB />
+            <CarsFromDB />
+            <MenuFromDB />
         </div>
     );
 }
